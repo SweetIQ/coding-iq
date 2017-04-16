@@ -71,3 +71,18 @@ footer .arrow,
 	padding-left: 0px;
 	padding-bottom: 20px;
 }
+
+.slide.intro {
+	text-align: center;
+	background-image: url('images/CodingIQ_7.jpg');
+}
+
+.slide.intro h1 {
+	position: relative;
+	top: 30%;
+}
+
+.slide.intro h2 {
+	position: relative;
+	top: 30%;
+}
