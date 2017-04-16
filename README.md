@@ -4,7 +4,7 @@ Coding IQ workshop presentations
 ### Workshop 1: Intro to HTML
 Get the slides [here](https://sweetiq.github.io/coding-iq/workshop1/slides.html).
 
-Get the project [here](http://bit.ly/2p8kNqd).
+Get the project [here](https://github.com/SweetIQ/coding-iq/archive/workshop1.zip).
 
 See the final project [here](https://sweetiq.github.io/coding-iq/workshop1/project/reference/final.html)
 
