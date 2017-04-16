@@ -1,23 +1,20 @@
-# Coding IQ
-Coding IQ workshop presentations
+#Ladies Learning Code
 
-## Workshop 1
-Intro to HTML
+##HTML & CSS for Beginners: Learn to Build a One Page Website From Scratch
 
-## Workshop 2
-Intro to CSS
+A full day introductory HTML & CSS workshop.
+This workshop covers HTML and CSS basics and is intended for complete beginners.
 
-## Workshop 3
-HTML & CSS: Level 2
+Created by [Christina Truong](http://christinatruong.com) for [Ladies Learning Code](http://ladieslearningcode.com).  
 
-## Workshop 4
-HTML & CSS: Level 3
+Email questions & comments to <content@ladieslearningcode.com>.
 
-## Workshop 5
-Intro to JQuery
+### Contributing
 
-## Workshop 6
-JQuery: Level 2
+This project uses [editorconfig](http://editorconfig.org/) to maintain consistent coding style. Make sure your text editor has an editorconfig [plugin](http://editorconfig.org/#download) installed.
 
+**Atom Users:** The Whitespace plugin (which is installed by default) has `Trim trailing whitespace` option turned on by default. Turn this off in the Whitespace plugin settings, otherwise it overwrites the setting in [.editorconfig](.editorconfig). This is a known [issue](https://github.com/sindresorhus/atom-editorconfig/issues/3). This is only required for editing the slides. Workshop learners are not required to add this plugin.
 
-> The content was taken from [Ladies Learning Code](https://github.com/ladieslearningcode) and adapted for the format of the workshops.
+Please refer to https://github.com/ladieslearningcode/llc-slidedeck-template for instructions for customization of the slide deck and features.
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
