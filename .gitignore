@@ -4,5 +4,5 @@
 .DS_Store
 
 # My work
-workshop1/project/index.html
+workshop1/project/*.html
 workshop1/project/images/codingiq/*
