@@ -1,0 +1,95 @@
+body {
+	border-top: none;
+}
+
+.slide {
+	max-width: none;
+}
+
+h1,
+.slide.title h2 {
+	font-family: "Montserrat", sans-serif;
+}
+
+h2,
+.welcome h2 {
+	color: #361E5C; /* purple */
+}
+
+h1,
+.welcome h1,
+.title h1,
+#indicator {
+	color: #07B4C8; /* blue */
+}
+
+a:hover,
+.highlight em,
+a.highlight,
+footer .arrow,
+.table-of-contents a:hover {
+	color: #E54F29; /* orange */
+}
+
+/* PRESENTATION */
+
+.slide.presentation .codingiq-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	line-height: 0;
+}
+
+.slide.presentation .codingiq-logo img {
+	width: 500px;
+}
+
+/* WELCOME */
+
+.slide.welcome .content {
+	padding: 45px 64px;
+}
+
+
+.slide.welcome .panel {
+	float: left;
+	width: 20%;
+}
+
+.slide.welcome .instructions {
+	float: right;
+	padding: 0;
+	width: 80%;
+}
+
+.slide.welcome .panel img {
+	width: 100px;
+}
+
+.slide.welcome .panel h2 {
+	float: none;
+	width: 100%;
+}
+
+.slide.welcome .instructions h1 {
+	background: none;
+	font-size: 6rem;
+	padding-left: 0px;
+	padding-bottom: 20px;
+}
+
+.slide.intro {
+	text-align: center;
+	background-image: url('images/CodingIQ_5.jpg');
+}
+
+.slide.intro h1 {
+	position: relative;
+	top: 30%;
+}
+
+.slide.intro h2 {
+	position: relative;
+	top: 30%;
+}
