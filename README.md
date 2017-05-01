@@ -13,8 +13,10 @@ Get the slides [here](https://sweetiq.github.io/coding-iq/workshop2/slides.html)
 
 Same project as workshop 1.
 
-### Workshop #3
-HTML & CSS: Level 2
+### Workshop #3: CSS Part 2
+Get the slides [here](https://sweetiq.github.io/coding-iq/workshop3/slides.html).
+
+Same project as workshop 1.
 
 ### Workshop #4
 HTML & CSS: Level 3
