@@ -76,12 +76,85 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown data-toc>
+    <section class="slide title" data-markdown data-toc>
       <script type="text/template">
-        # Review
+        #Review
+      </script>
+    </section>
 
-        1. Classes
-        2. Margin / padding / width / height / borderWhen you need to be more specific, try using a descendant selector.
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        <h2>Google Fonts</h2>
+
+        Get link of your font stylesheet from Google Fonts
+        ```xml
+        <head>
+          <meta charset="utf-8">
+          <title>Page Title</title>
+          <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300'>
+          <link rel="stylesheet" href="css/styles.css">
+        </head>
+        ```
+        and then use those fonts in your CSS
+        ```
+        body {
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+        }
+        h1,
+        h2 {
+          font-family: 'Bad Script', cursive;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        <h2>Classes</h2>
+
+        Apply a class to an element
+        ```xml
+        <section class="about">
+          ...
+        </section>
+
+        <section class="loves">
+          ...
+        </section>
+        ```
+        to be able to target it in your CSS
+        ```
+        /* applies to any element with the class of about */
+        .about {
+          background: red;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        <h2>margin vs. padding</h2>
+
+        - Margin applies to the outside of an element
+        - Padding applies to the inside of an element
+
+        <textarea class="snippet" data-subject="#example">background: lightblue;
+padding: 0px;
+margin: 0px;</textarea>
+
+        <div id="example" class="example">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
+        </div>
+
+        Reset margin and padding of the body to remove any unwanted spacing you might have on your page
+        ```
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        ```
       </script>
     </section>
 
@@ -138,7 +211,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Class Exercise #9: Style the header
+        # Class Exercise #1: Style the header
 
         1. Let's add some specific styles to the header, to set it apart from the rest of the page.  We can't use `h1` or `h2` by itself since it will select all of them on the page so use *descendant selectors* instead.
 
@@ -283,7 +356,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise: Float
+        # Class Exercise #2: Float
 
         Add a class to the profile image so to apply the float only to this image.
 
@@ -323,7 +396,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Class Exercise: Reset the float
+        # Class Exercise #3: Reset the float
 
         To restore the regular stacking flow *after* the floated element, it needs to be *reset*. There's a couple ways to do it. Today, let's use `overflow`.
 
@@ -401,7 +474,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Exercise #10: Style the images (20mins)
+        # Class Exercise #4: Style the images (20mins)
 
         Take some time to style your About and Loves images.
 
@@ -501,7 +574,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Class Exercise #11: background
+        # Class Exercise #5: background
 
         Let&#39;s add the below sample code to our project, one value at a time, to see how each property works.
 
@@ -545,7 +618,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Class Exercise #11: background
+        # Class Exercise #6: background
 
         Use `rgba()` as the value to create this effect. The values must be declared using this syntax:
 
@@ -593,7 +666,7 @@ background-size: cover;
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Exercise 8: Gradients (~10mins)
+        # Class Exercise #7: Gradients (~10mins)
 
         Using the technique from the previous slide, add a different background image to the `header` section, with a gradient.
 
