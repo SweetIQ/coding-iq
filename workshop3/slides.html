@@ -428,6 +428,53 @@ margin: 0px;</textarea>
       </script>
     </section>
 
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Float & text wrapping
+
+        If the text is longer than the image height, it'll look like this:
+
+        <img width="1100" src="framework/img/workshop/float-text-wrap.png">
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Float & text wrapping
+
+        To keep the text from wrapping, each component needs to be floated and set to a specific width. Using percentages will keep the page flexible.
+
+        Think of the components as two boxes that need to fit in the same space. That means the total width needs to equal 100%, including margin.
+
+        ```
+        <section class="about">
+          <img src="images/profile.jpg" alt="Your Name"><!-- floated image -->
+
+          <div class="summary"><!-- wrap text into div to be floated -->
+            <h1>Hello!</h1>
+            ...
+          </div>
+        </section>
+        ```
+
+        ```
+        .about img {
+          border-radius: 50%;
+          float: right;
+          margin-right: 3%;
+          width: 30%;
+        }
+        ```
+        ```
+        .summary {
+          width: 67%;
+          float: left;
+        }
+        ```
+      </script>
+    </section>
+
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #border-radius
