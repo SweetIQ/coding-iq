@@ -763,14 +763,26 @@ background-size: cover;
       </script>
     </section>
 
+    <section class="slide">
+      <h1>Center aligning with margin</h1>
+      <p><code>margin</code> can also be used to auto center align block level elements.</p>
+      <p>First, a width needs to be set. Then, setting the left &amp; right values to <code>auto</code> will find the center of the page. The <code>0</code> just refers to the top and bottom value.</p>
+
+      <textarea class="snippet" data-subject="#margin-auto">background-color: lightblue;
+height: 100px;
+width: 600px;
+margin: 0 auto;</textarea>
+      <div id="margin-auto">box</div>
+    </section>
+
     <section class="slide" data-markdown>
       <script type="text/template">
         # Content Wrappers
 
-        The content runs too wide. Let’s use the `margin:0 auto;` technique to set a width to the content and auto center align it. Try adding the styles to the `.profile` section in your CSS file.
+        The content runs too wide. Let’s use the `margin:0 auto;` technique to set a width to the content and auto center align it. Try adding the styles to the `.about` section in your CSS file.
 
         ```
-        .profile {
+        .about {
           width: 1000px;
           margin: 0 auto;
         }
@@ -788,20 +800,20 @@ background-size: cover;
 
         The background colour is now restricted because it's only stretching 1000px (the set width).
 
-        To fix this, create a “container” just for aligning the content. Add a new `div` with a class *around just the content*. Let's name it `content-wrap`.
+        To fix this, create a “container” just for aligning the content. Add a new `div` with a class *around just the content*. Let's name it `content-wrapper`.
 
         ```
         <section class="about">
-          <div class="content-wrapper"><!-- new content wrap div -->
-            <img src="images/profile-generic.jpg" alt="Your Name">
+          <div class="content-wrapper"> <!-- new content-wrapper div -->
+            <img src="images/profile.jpg" alt="Your Name">
             <div class="summary">
               ...
             </div>
-          </div><!-- close contact wrap div -->
+          </div> <!-- close content-wrapper div -->
         </section>
         ```
 
-        Then apply the styles to `.content-wrap` instead of `.profile`.
+        Then apply the styles to `.content-wrapper` instead of `.about`.
         ```
         .content-wrap {
           width: 1000px;
@@ -815,24 +827,17 @@ background-size: cover;
       <script type="text/template">
         #Class Exercise #9: Content wrappers!
 
-        Add the `.content-wrap` HTML to each page block (header, about, work, etc). Remember, it has to wrap *only* the content.
+        Add the `.content-wrapper` HTML to each page block (header, about, love, etc). Remember, it has to wrap *only* the content.
 
-        Education example section below.
+        Header example below.
         ```
-        <section class="education">
-          <div class="content-wrapper"><!-- open content-wrap-->
-            <h1>Education</h1>
-            <div class="item">
-              ...
-            </div>
-            <div class="item">
-              ...
-            </div>
-          </div><!-- close content-wrap -->
-        </section>
+        <header>
+          <div class="content-wrapper"> <!-- new content-wrapper div -->
+            <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
+            <h2>I'm a digital <strong>designer</strong> and <strong>developer</strong> with a penchant for gourmet doughnuts.</h2>
+          </div> <!-- close content-wrapper div -->
+        </header>
         ```
-
-        For reference, your page should look similar to <!-- .element: class="note" --> [4-content-wrap.html](project/examples/4-content-wrap.html) and [4-content-wrap.css](project/examples/4-content-wrap.css).
       </script>
     </section>
 
