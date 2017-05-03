@@ -238,6 +238,64 @@ margin: 0px;</textarea>
       </script>
     </section>
 
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #border-radius
+
+        CSS3 introduced some new properties such as `border-radius`, used to make rounded corners or perfect circles, removing the need to manipulate image files.
+
+        The value can be set using various measurement units.
+        Let's look at how we can use `px` and `%` in the examples below.
+
+        <div class="group">
+          <div class="col-2">
+            <textarea class="snippet" data-subject="#rounded">border-radius: 15px;</textarea>
+
+            <img id="rounded" src="project/reference/images/robots.jpg" alt="doughnuts" width="150">
+          </div>
+
+          <div class="col-2">
+            <textarea class="snippet" data-subject="#circle">border-radius: 50%;</textarea>
+
+            <img id="circle" src="project/reference/images/robots.jpg" alt="doughnuts" width="150">
+          </div>
+        </div>
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        # Pseudo class & hover effects
+
+        It's common to apply a hover style to links. Use CSS *pseudo-class*, `:hover` to accomplish this.  This keyword is *attached* to a selector and specifies a *state* of the element, using a colon and **no** space.
+
+        <textarea class="snippet" data-subject="#hover">a {
+          padding: 10px;
+        }
+        a:hover {
+          border: 1px solid black;
+          background: red;
+          color: white;
+        }</textarea>
+        <a id="hover">I'm a link!</a>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise #2: Style the images
+
+        Take some time to style your About and Loves images.
+
+        You can also use `width` or `height` on the images to make them all the same size and `margin`, `padding`, `border` to space and style the images.
+
+        If you have some text links on your page, add a hover effect.
+
+        For your reference, check out [exercise-10.html](project/reference/exercise-10.html).
+      </script>
+    </section>
+
     <section class="slide" data-markdown>
       <script type="text/template">
         # Building a web page in blocks
@@ -276,6 +334,236 @@ margin: 0px;</textarea>
         ```
         .about {
           color: green;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #class & id Naming Conventions
+
+        When choosing a `class` or `id` name, use a descriptive name and **no** spaces. Instead, use hyphens (`-`), underscores (`_`) or camelCase.
+
+        CSS is also case sensitive so it's important (for your own sanity) to pick one style and be consistent.
+
+        ```
+        class="content-wrapper"
+        class="content_wrapper"
+        class="contentWrapper"
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise #3: Apply best practices
+
+        Rename your classes to follow conventions.
+
+        AND
+
+        Take some time to order your CSS.
+
+          1. HTML element selectors
+          2. Descendant selectors
+          3. Class selectors
+
+      </script>
+    </section>
+
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        #Background images
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Background images
+
+        So far, we've been using `background` to add colours but it can also be used to add background *images*.
+
+        There are two ways to declare the `background` property.
+
+        ```css
+        /* shorthand */
+        background: url(folder-name/image-file.jpg);
+        ```
+        ```css
+        /* longhand */
+        background-image: url(folder-name/image-file.jpg);
+        ```
+        `background` is shorthand for many different background properties.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Background images
+
+        **Important:** Note the location of the CSS file.
+
+        ```html
+        project/
+        |-- css/
+        |--styles.css
+        |-- images/
+        |-- reference/
+        |-- index.html
+        ```
+
+        Since it&#39;s inside of the **css** folder, the file path needs to reflect that.
+        Use `../` to indicate that the directory needs to move *up* and *out* of the containing folder.
+
+        ```css
+        background: url(../images/image-file.jpg);
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Background styles & the x-axis
+
+        Every time an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
+
+        ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="left" -->
+        </div>
+
+        If a background image/colour is added to `body`, it will appear *behind* the nested elements (header, sections and footer).
+
+        Image source and further reading <!-- .element: class="note" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
+        </div>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Background Property
+
+        If the image is smaller than the width of your browser window, it will repeat by default. We can change that with the `no-repeat` value like this:
+
+        ```
+        body { /* longhand */
+          background-image: url(../images/buildings.jpg);
+          background-repeat: no-repeat;
+        }
+        ```
+        ```
+        body { /* shorthand */
+          background: url(../images/buildings.jpg) no-repeat;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise #4: background
+
+        Let&#39;s add the below sample code to our project, one value at a time, to see how each property works.
+
+        ```
+        body { /* longhand */
+          background-image: url('../images/buildings.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        ```
+        ```
+        body { /* shorthand */
+          background: url(../images/buildings.jpg) no-repeat fixed;
+          background-size: cover;
+        }
+        ```
+
+        ---
+        ###Pro tip!
+
+        Note that `background-size` is the longhand property. To include it in the shorthand style, it **must** be included after `background-position`, separated with the `/` character. In this case, it may be less error prone to just add it via the longhand property. More about background [here](https://css-tricks.com/almanac/properties/b/background/) and [here](http://www.carsonshold.com/2013/02/css-background-sizecover-doesnt-like-fixed-positioning/).
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Opaque background Styles
+
+        The image adds some pizzazz but now it's hard to read the text!
+
+        Remember RGB colour values?  Use this instead of hex or keyword values to set an opacity to a background colour.
+
+        Most online colour resources will have all the different types of values listed, or use image editing software like Photoshop.
+
+        Or a quick online search almost always ends up with a solution like this tool right here: <http://hex.colorrrs.com>!
+
+        The LLC project uses <span style="background:#612940;padding:0 5px;color: white;">#612940</span> which coverts to `rgb(97,41,64)`.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise #5: background
+
+        Use `rgba()` as the value to create this effect. The values must be declared using this syntax:
+
+        ```css
+        rgba(r value, g value, b value, alpha transparency percentage)
+        ```
+        ```css
+        .about {
+          background: rgba(97, 41, 64, 0.95);
+        }
+        ```
+        The closer to 1 the alpha transparency value is, the more solid the colour will appear.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Background Gradients
+
+        Gradients are usually one color that fades into another. Gradients are set using the either the longhand `background-image` property or the shorthand `background` property.
+
+        To set the values, use this syntax for the value, `linear-gradient(color, color)`, to set the start and stop colour.
+
+        In the example below, try putting a start and stop colour. Use keywords, hex or rgb values.
+
+        <textarea class="snippet">background-image: linear-gradient();</textarea>
+
+        With CSS gradients, you can also control the direction of the fade, the colors, as well as where the color changes happen. [Learn all about gradients here](http://css-tricks.com/css3-gradients/).
+      </script>
+    </section>
+
+    <section class="slide">
+      <h1>Gradients and Background Images</h1>
+
+      <p>In the <strong>Skills</strong> section, the text may be hard to read depending on the background image. We can actually use multiple background images to set a gradient on top of the image!</p>
+      <p>Declare the gradient <em>first</em> so it can sit on top of the image. We also want to see the image through the gradient so use <code>rgba</code> color values to set the alpha transparency. Separate multiple backgrounds with a comma.</p>
+
+      <textarea class="snippet" data-subject="#bg-image-gradient">height: 400px;
+background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
+            url(project/images/new-york-city.jpg);
+background-size: cover;
+</textarea>
+      <div id="bg-image-gradient"></div>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise #6: Gradients (~10mins)
+
+        Using the technique from the previous slide, add a different background image to the `header` section, with a gradient.
+
+        Reminder, the current background image is set in the `body` selector. If you add a background image to the `header` section, it will sit "on top".  Remember the [z-axis](#z-axis)?
+
+        ```
+        header {
+          background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
+          url(../images/new-york-city.jpg);
+          background-size: cover;
+          color: white;
         }
         ```
       </script>
@@ -470,261 +758,6 @@ margin: 0px;</textarea>
         .summary {
           width: 67%;
           float: left;
-        }
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        #border-radius
-
-        CSS3 introduced some new properties such as `border-radius`, used to make rounded corners or perfect circles, removing the need to manipulate image files.
-
-        The value can be set using various measurement units.
-        Let's look at how we can use `px` and `%` in the examples below.
-
-        <div class="group">
-          <div class="col-2">
-            <textarea class="snippet" data-subject="#rounded">border-radius: 15px;</textarea>
-
-            <img id="rounded" src="project/reference/images/robots.jpg" alt="doughnuts" width="150">
-          </div>
-
-          <div class="col-2">
-            <textarea class="snippet" data-subject="#circle">border-radius: 50%;</textarea>
-
-            <img id="circle" src="project/reference/images/robots.jpg" alt="doughnuts" width="150">
-          </div>
-        </div>
-
-      </script>
-    </section>
-
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        # Pseudo class & hover effects
-
-        It's common to apply a hover style to links. Use CSS *pseudo-class*, `:hover` to accomplish this.  This keyword is *attached* to a selector and specifies a *state* of the element, using a colon and **no** space.
-
-        <textarea class="snippet" data-subject="#hover">a {
-          padding: 10px;
-        }
-        a:hover {
-          border: 1px solid black;
-          background: red;
-          color: white;
-        }</textarea>
-        <a id="hover">I'm a link!</a>
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Class Exercise #4: Style the images (20mins)
-
-        Take some time to style your About and Loves images.
-
-        You can also use `width` or `height` on the images to make them all the same size and `margin`, `padding`, `border` to space and style the images.
-
-        If you have some text links on your page, add a hover effect.
-
-        For your reference, check out [exercise-10.html](project/reference/exercise-10.html).
-      </script>
-    </section>
-
-    <section class="slide title" data-markdown data-toc>
-      <script type="text/template">
-        #Background images
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Background images
-
-        So far, we've been using `background` to add colours but it can also be used to add background *images*.
-
-        There are two ways to declare the `background` property.
-
-        ```css
-        /* shorthand */
-        background: url(folder-name/image-file.jpg);
-        ```
-        ```css
-        /* longhand */
-        background-image: url(folder-name/image-file.jpg);
-        ```
-        `background` is shorthand for many different background properties.
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Background images
-
-        **Important:** Note the location of the CSS file.
-
-        ```html
-        project/
-        |-- css/
-        |--styles.css
-        |-- images/
-        |-- reference/
-        |-- index.html
-        ```
-
-        Since it&#39;s inside of the **css** folder, the file path needs to reflect that.
-        Use `../` to indicate that the directory needs to move *up* and *out* of the containing folder.
-
-        ```css
-        background: url(../images/image-file.jpg);
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Background styles & the x-axis
-
-        Every time an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
-
-        ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="left" -->
-        </div>
-
-        If a background image/colour is added to `body`, it will appear *behind* the nested elements (header, sections and footer).
-
-        Image source and further reading <!-- .element: class="note" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
-        </div>
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Background Property
-
-        If the image is smaller than the width of your browser window, it will repeat by default. We can change that with the `no-repeat` value like this:
-
-        ```
-        body { /* longhand */
-          background-image: url(../images/buildings.jpg);
-          background-repeat: no-repeat;
-        }
-        ```
-        ```
-        body { /* shorthand */
-          background: url(../images/buildings.jpg) no-repeat;
-        }
-        ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Class Exercise #5: background
-
-        Let&#39;s add the below sample code to our project, one value at a time, to see how each property works.
-
-        ```
-        body { /* longhand */
-          background-image: url('../images/buildings.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-        }
-        ```
-        ```
-        body { /* shorthand */
-          background: url(../images/buildings.jpg) no-repeat fixed;
-          background-size: cover;
-        }
-        ```
-
-        ---
-        ###Pro tip!
-
-        Note that `background-size` is the longhand property. To include it in the shorthand style, it **must** be included after `background-position`, separated with the `/` character. In this case, it may be less error prone to just add it via the longhand property. More about background [here](https://css-tricks.com/almanac/properties/b/background/) and [here](http://www.carsonshold.com/2013/02/css-background-sizecover-doesnt-like-fixed-positioning/).
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Opaque background Styles
-
-        The image adds some pizzazz but now it's hard to read the text!
-
-        Remember RGB colour values?  Use this instead of hex or keyword values to set an opacity to a background colour.
-
-        Most online colour resources will have all the different types of values listed, or use image editing software like Photoshop.
-
-        Or a quick online search almost always ends up with a solution like this tool right here: <http://hex.colorrrs.com>!
-
-        The LLC project uses <span style="background:#612940;padding:0 5px;color: white;">#612940</span> which coverts to `rgb(97,41,64)`.
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Class Exercise #6: background
-
-        Use `rgba()` as the value to create this effect. The values must be declared using this syntax:
-
-        ```css
-        rgba(r value, g value, b value, alpha transparency percentage)
-        ```
-        ```css
-        .about {
-          background: rgba(97, 41, 64, 0.95);
-        }
-        ```
-        The closer to 1 the alpha transparency value is, the more solid the colour will appear.
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Background Gradients
-
-        Gradients are usually one color that fades into another. Gradients are set using the either the longhand `background-image` property or the shorthand `background` property.
-
-        To set the values, use this syntax for the value, `linear-gradient(color, color)`, to set the start and stop colour.
-
-        In the example below, try putting a start and stop colour. Use keywords, hex or rgb values.
-
-        <textarea class="snippet">background-image: linear-gradient();</textarea>
-
-        With CSS gradients, you can also control the direction of the fade, the colors, as well as where the color changes happen. [Learn all about gradients here](http://css-tricks.com/css3-gradients/).
-      </script>
-    </section>
-
-    <section class="slide">
-      <h1>Gradients and Background Images</h1>
-
-      <p>In the <strong>Skills</strong> section, the text may be hard to read depending on the background image. We can actually use multiple background images to set a gradient on top of the image!</p>
-      <p>Declare the gradient <em>first</em> so it can sit on top of the image. We also want to see the image through the gradient so use <code>rgba</code> color values to set the alpha transparency. Separate multiple backgrounds with a comma.</p>
-
-      <textarea class="snippet" data-subject="#bg-image-gradient">height: 400px;
-background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
-            url(project/images/new-york-city.jpg);
-background-size: cover;
-</textarea>
-      <div id="bg-image-gradient"></div>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Class Exercise #7: Gradients (~10mins)
-
-        Using the technique from the previous slide, add a different background image to the `header` section, with a gradient.
-
-        Reminder, the current background image is set in the `body` selector. If you add a background image to the `header` section, it will sit "on top".  Remember the [z-axis](#z-axis)?
-
-        ```
-        header {
-          background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
-          url(../images/new-york-city.jpg);
-          background-size: cover;
-          color: white;
         }
         ```
       </script>
