@@ -348,9 +348,9 @@ margin: 0px;</textarea>
         CSS is also case sensitive so it's important (for your own sanity) to pick one style and be consistent.
 
         ```
-        class="content-wrapper"
-        class="content_wrapper"
-        class="contentWrapper"
+        class="profile-image"
+        class="profile_image"
+        class="profileImage"
         ```
       </script>
     </section>
@@ -552,7 +552,7 @@ background-size: cover;
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Class Exercise #6: Gradients (~10mins)
+        # Class Exercise #6: Gradients
 
         Using the technique from the previous slide, add a different background image to the `header` section, with a gradient.
 
@@ -644,7 +644,7 @@ background-size: cover;
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Class Exercise #2: Float
+        # Class Exercise #7: Float
 
         Add a class to the profile image so to apply the float only to this image.
 
@@ -684,7 +684,7 @@ background-size: cover;
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Class Exercise #3: Reset the float
+        # Class Exercise #8: Reset the float
 
         To restore the regular stacking flow *after* the floated element, it needs to be *reset*. There's a couple ways to do it. Today, let's use `overflow`.
 
@@ -760,6 +760,79 @@ background-size: cover;
           float: left;
         }
         ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Content Wrappers
+
+        The content runs too wide. Let’s use the `margin:0 auto;` technique to set a width to the content and auto center align it. Try adding the styles to the `.profile` section in your CSS file.
+
+        ```
+        .profile {
+          width: 1000px;
+          margin: 0 auto;
+        }
+        ```
+
+        Your page will look something like this:
+
+        ![](framework/img/workshop/margin-auto.png)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Content Wrappers
+
+        The background colour is now restricted because it's only stretching 1000px (the set width).
+
+        To fix this, create a “container” just for aligning the content. Add a new `div` with a class *around just the content*. Let's name it `content-wrap`.
+
+        ```
+        <section class="about">
+          <div class="content-wrapper"><!-- new content wrap div -->
+            <img src="images/profile-generic.jpg" alt="Your Name">
+            <div class="summary">
+              ...
+            </div>
+          </div><!-- close contact wrap div -->
+        </section>
+        ```
+
+        Then apply the styles to `.content-wrap` instead of `.profile`.
+        ```
+        .content-wrap {
+          width: 1000px;
+          margin: 0 auto;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise #9: Content wrappers!
+
+        Add the `.content-wrap` HTML to each page block (header, about, work, etc). Remember, it has to wrap *only* the content.
+
+        Education example section below.
+        ```
+        <section class="education">
+          <div class="content-wrapper"><!-- open content-wrap-->
+            <h1>Education</h1>
+            <div class="item">
+              ...
+            </div>
+            <div class="item">
+              ...
+            </div>
+          </div><!-- close content-wrap -->
+        </section>
+        ```
+
+        For reference, your page should look similar to <!-- .element: class="note" --> [4-content-wrap.html](project/examples/4-content-wrap.html) and [4-content-wrap.css](project/examples/4-content-wrap.css).
       </script>
     </section>
 
