@@ -93,3 +93,11 @@ footer .arrow,
 	position: relative;
 	top: 30%;
 }
+
+.slide.quizz h2 {
+	padding: 20px 0;
+}
+
+.slide.quizz h2 a {
+	text-decoration: none;
+}
