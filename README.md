@@ -19,7 +19,7 @@ Get the slides [here](https://sweetiq.github.io/coding-iq/workshop3/slides.html)
 Same project as workshop 1.
 
 ### Workshop #4: Page Layout
-Get the slides [here](https://sweetiq.github.io/coding-iq/workshop3/slides.html).
+Get the slides [here](https://sweetiq.github.io/coding-iq/workshop4/slides.html).
 
 ### Workshop #5
 Intro to JQuery
