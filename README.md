@@ -21,8 +21,8 @@ Same project as workshop 1.
 ### Workshop #4: Page Layout
 Get the slides [here](https://sweetiq.github.io/coding-iq/workshop4/slides.html).
 
-### Workshop #5
-Intro to JQuery
+### Workshop #5: Navigation bar / menu
+Get the slides [here](https://sweetiq.github.io/coding-iq/workshop5/slides.html).
 
 ## Workshop #6
 JQuery: Level 2
