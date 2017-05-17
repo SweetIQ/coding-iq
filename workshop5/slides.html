@@ -80,19 +80,36 @@
       ##[Question 3](http://www.strawpoll.me/12937004)
       ##[Question 4](http://www.strawpoll.me/12937014)
       ##[Question 5](http://www.strawpoll.me/12937121)
-      ##[Question 6](http://www.strawpoll.me/12937217)
+      ##[BONUS](http://www.strawpoll.me/12986538)
     </script>
   </section>
 
   <section class="slide" data-markdown>
     <script type="text/template">
-      #Quizz
+      ##BONUS
 
       Consider this piece of HTML:
       ```xml
-      <div class="profile">
-        ...
-      </div>
+      <p id="textId" class="textClass">Hello world!</p>
+      ```
+
+      And the following CSS:
+      ```
+      p {
+        color: blue;
+      }
+
+      #textId {
+        color: yellow;
+      }
+
+      .textClass {
+        color: red;
+      }
+
+      [~=Hello world!] {
+        color: rainbow;
+      }
       ```
     </script>
   </section>
@@ -220,9 +237,22 @@
 
   <section class="slide" data-markdown data-toc>
     <script type="text/template">
-      <h1>Menu</h1>
+      <h1>Lists</h1>
 
-      <p>Before the header:</p>
+      Two HTML elements for lists:
+
+      - `<ul>` for unordered lists, displays using bullet points
+      - `<ol>` for ordered lists, displays with an ascending counter on the left
+
+      Then add items using the `<li>` elements.
+    </script>
+  </section>
+
+  <section class="slide" data-markdown>
+    <script type="text/template">
+      <h1>`<ul>`</h1>
+
+      Example using `<ul>`:
       ```html
       <div class="menu">
         <ul>
@@ -233,292 +263,242 @@
       </div>
       ```
 
-      styles.css
-      ```css
-      ul, li {
-        display: inline-block;
-      }
+      <div class="menu">
+        <ul>
+          <li>Menu item 1</li>
+          <li>Menu item 2</li>
+          <li>Menu item 3</li>
+        </ul>
+      </div>
+    </script>
+  </section>
+
+  <section class="slide" data-markdown>
+    <script type="text/template">
+      <h1>`<ol>`</h1>
+
+      Example using `<ol>`:
+      ```html
+      <div class="menu">
+        <ol>
+          <li>Menu item 1</li>
+          <li>Menu item 2</li>
+          <li>Menu item 3</li>
+        </ol>
+      </div>
+      ```
+
+      <div class="menu">
+        <ol>
+          <li>Menu item 1</li>
+          <li>Menu item 2</li>
+          <li>Menu item 3</li>
+        </ol>
+      </div>
+    </script>
+  </section>
+
+  <section class="slide" data-markdown>
+    <script type="text/template">
+      <h1>Exercise #1: Menu</h1>
+
+      <p>Before your header, create a menu:</p>
+      ```html
+      <div class="menu">
+        <ul>
+          <li>Profile</li>
+          <li>Gallery</li>
+          <li>Contact</li>
+        </ul>
+      </div>
       ```
     </script>
   </section>
 
   <section class="slide" data-markdown>
     <script type="text/template">
-      # Float images
+      # Navigation
 
-      Float your images (right or left).
+      Let's create other pages to our website and learn how to navigate from one to the other through our menu.
 
-      **Note**: If you already have a selector for `img`, apply the style inside that selector, do not repeat it.
+      In the project folder, create other HTML files.
 
-      ```css
-      img {
-        float: right;
-      }
-      ```
+      - `gallery.html`
+      - `contact.html`
 
-      What if we only want to float the profile picture and not the ones in the love section or the footer ?
-    </script>
-  </section>
+      And rename `index.html` to `profile.html`.
 
-  <section class="slide" data-markdown>
-    <script type="text/template">
-      # Exercise #1: Float the profile image
-
-      Add a class to the profile image so to apply the float only to this image.
+      Start your new pages with the base HTML tags and a title to differentiate them.
 
       ```html
-      <img class="profile-img" src="images/profile.jpg" alt="Laura Ipsum">
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <title>Laura Ipsum | Designer & Developer</title>
+        </head>
+        <body>
+          <header>
+           <h1>Title</h1>
+          </header>
+        </body>
+      </html>
       ```
-
-      Then float the image (right or left).  Also, add space between the image and text using `margin`.
-
-      ```css
-      /* ABOUT
-      -----------------------------------------*/
-      .profile-img {
-        float: right;
-        margin-left: 20px; /* or margin-right if image floated left */
-      }
-      ```
-
-      Are you able to spot some unexpected results ?
-    </script>
-  </section>
-
-  <section class="slide side-by-side" data-markdown>
-    <script type="text/template">
-      #Floats & breaking the stacking flow
-
-      ![](framework/img/workshop/float-long-text.png)
-      ![](framework/img/workshop/float-short-text.png)
-
-      If your content is the same size or longer than the floated element (the profile image) as shown on the left, you won't notice this problem.
-
-      Is anyone having this issue ?
-    </script>
-  </section>
-
-  <section class="slide centered css-gif" data-markdown>
-  </section>
-
-  <section class="slide" data-markdown>
-    <script type="text/template">
-      # Exercise #2: Reset the float
-
-      To restore the regular stacking flow *after* the floated element, it needs to be *reset*. There's a couple ways to do it. Today, let's use `overflow`.
-
-      Adding `overflow: hidden;` to the *parent* of the floated element forces it to 'contain' any floated child elements.
-
-      ```
-      <section class="about">
-        <img class="profile-img" src="images/profile.jpg" alt="Laura Ipsum">
-        ...
-      </section>
-      ```
-      ```
-      .about {
-        overflow: hidden;
-      }
-      ```
-    </script>
-  </section>
-
-  <section class="slide side-by-side" data-markdown>
-    <script type="text/template">
-      # Resetting floats
-
-      This is a concept that requires much more discussion outside of the scope for today.  For more information, check out these extra resources:
-
-      * [CSS Fundamentals: Containing Children](http://code.tutsplus.com/tutorials/css-fudamentals-containing-children--net-5664)
-      * [Clearing Floats: An Overview of Different clearfix Methods](http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/)
-      * [Force Element To Self-Clear its Children](http://css-tricks.com/snippets/css/clear-fix/)
     </script>
   </section>
 
   <section class="slide" data-markdown>
     <script type="text/template">
-      #Float & text wrapping
-      If the text is longer than the image height, it'll look like this:
+      # Navigation
 
-      Is anyone seeing this ?
+      Now let's add links to our menu elements to redirect to our new pages.
 
-      <img width="1100" src="framework/img/workshop/float-text-wrap.png">
+      Use links `<a>` with the `href` attribute to linking to other pages.
+
+      ```html
+      <a href="gallery.html"></a>
+      ```
+
+      Apply it to all the menu element:
+      ```html
+      <div class="menu">
+        <ul>
+          <li>
+           <a href="profile.html">Profile</a>
+          </li>
+          <li>
+           <a href="gallery.html">Gallery</a>
+          </li>
+          <li>
+           <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      ```
     </script>
   </section>
 
   <section class="slide" data-markdown>
     <script type="text/template">
-      #Float & text wrapping
-      To keep the text from wrapping, each component needs to be floated.
+      # Exercise #2: Create menu on all pages
 
-      We want the text to be on the left and the image to the right.
+      If we want to be able to navigate from pages to pages, the menu needs to appear on the pages.
 
-      Currently, this is what our about section looks like, we have more than one element that needs to be floated on the left.
-
-      ```
-      <section class="about">
-        <img class="profile-img" src="images/profile.jpg" alt="Profile picture">
-
-        <h1>About me</h1>
-
-        <p>Paragraph 1.</p>
-        <p>Paragraph 2.</p>
-      </section>
+      So add the menu inside the body of `gallery.html` and `contact.html`:
+      ```html
+      <body>
+        <div class="menu">
+          <ul>
+           <li><a href="profile.html">Profile</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <header>
+          <h1>Title</h1>
+        </header>
+      </html>
       ```
     </script>
   </section>
 
   <section class="slide" data-markdown data-toc>
     <script type="text/template">
-      #Content wrappers
-      The solution: content wrappers.
+      # Display property
 
-      ```
-      <section class="about">
-        <img class="profile-img" src="images/profile.jpg" alt="Profile picture">
+      ##block
+      `display: block;`
 
-        <div>
-          <h1>About me</h1>
+      Elements take 100% of the width of the page.
 
-          <p>Paragraph 1.</p>
-          <p>Paragraph 2.</p>
-        </div>
-      </section>
-      ```
+      ##inline
+      `display: inline;`
 
-      What do we need to do to target only this div in our CSS ?
+      Elements have the minimum width and then get displayed one next to the other.
+
+      Let's take a look at our list elements with the inspector !
     </script>
   </section>
 
   <section class="slide" data-markdown>
     <script type="text/template">
-      #Content wrappers
-      The solution: content wrappers.
+      # Exercise #3: Style the menu
 
-      ```html
-      <section class="about">
-        <img class="profile-img" src="images/profile.jpg" alt="Profile picture">
+      Style you menu however you would like it to look !
 
-        <div class="summary">
-          <h1>About me</h1>
+      - Add a background color ?
+      - Add another font ?
+      - Add new hover effects ?
 
-          <p>Paragraph 1.</p>
-          <p>Paragraph 2.</p>
-        </div>
-      </section>
+      ##Tips
+
+      Do you want to get rid of the bullet points ?
+      ```css
+      .menu ul {
+        list-style-type: none;
+      }
+      ```
+
+      Do you want to center the list ?
+      ```css
+      .menu {
+        text-align: center;
+      }
       ```
     </script>
   </section>
 
+  <section class="slide" data-markdown data-toc>
+    <script type="text/template">
+      # Position property
+
+      The `position` property can be used to place elements in a specific spot on the page without affecting the elements around it.
+
+      There are three options: `relative`, `absolute` and `fixed`.
+
+      `position` is also used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify *where* an element will be positioned.
+
+      Today we'll be using a fixed position.
+
+      ---
+      ###Resource
+      To learn more about position, [go here](http://learnlayout.com/position.html).
+    </script>
+  </section>
+
+  <section class="slide">
+    <h1>Position: fixed</h1>
+
+    <p>When positioning an element as <code>fixed</code>, it will <em>always</em> be positioned to the viewport (browser window) and stay fixed, even on page scroll.</p>
+
+    <p>In the example below, try adding a <code>top</code> value (or any other directional offset property: <code>right</code>, <code>bottom</code>, <code>left</code>).</p>
+
+    <textarea class="snippet" data-subject="#fixed">.box {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  position: fixed;
+  top: ;
+}</textarea>
+
+    <div id="fixed">
+      <div class="box"></div>
+    </div>
+    </section>
+
   <section class="slide" data-markdown>
     <script type="text/template">
-      #Content wrappers
+      # Exercise #4: Fixing the menu
 
-      So now we can float the image left and the summary right.
-
-      Then we need to add width percentages that cannot exceed a total of 100%.
+      Now we want to fix the menu on top of the page.
 
       ```css
-      .profile-img {
-        float: right;
-        width: 30%;
-        margin: 3%;
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0
       }
-
-      .summary {
-        float: left;
-        width: 64%;
-      }
-      ```
-    </script>
-  </section>
-
-  <section class="slide" data-markdown>
-    <script type="text/template">
-      # Exercise #3: Floats and content wrappers
-
-      1 - Add a summary content-wrapper
-
-      2 - Float the summary section on the left
-
-      ```css
-      .summary {
-        float: left;
-      }
-      ```
-
-      3 - Set width percentages to both `.summary` and `.profile-img`
-
-    </script>
-  </section>
-
-  <section class="slide" data-toc>
-    <h1>Center aligning with margin</h1>
-    <p><code>margin</code> can also be used to auto center align block level elements.</p>
-    <p>First, a width needs to be set. Then, setting the left &amp; right values to <code>auto</code> will find the center of the page. The <code>0</code> just refers to the top and bottom value.</p>
-
-    <textarea class="snippet" data-subject="#margin-auto">background-color: lightblue;
-height: 100px;
-width: 600px;
-margin: 0;</textarea>
-    <div id="margin-auto">box</div>
-  </section>
-
-  <section class="slide" data-markdown>
-    <script type="text/template">
-      # Center aligning with margin
-      The content runs too wide. Let’s use the `margin:0 auto;` technique to set a width to the content and auto center align it. Try adding the styles to the `.about` section in your CSS file.
-      ```
-      .about {
-        width: 1000px;
-        margin: 0 auto;
-      }
-      ```
-      Your page will look something like this:
-      ![](framework/img/workshop/margin-auto.png)
-    </script>
-  </section>
-
-  <section class="slide" data-markdown>
-    <script type="text/template">
-      # Another use for content wrappers
-      The background colour is now restricted because it's only stretching 1000px (the set width).
-
-      To fix this, create a “container” just for aligning the content. Add a new `div` with a class *around just the content*. Let's name it `content-wrapper`.
-      ```
-      <section class="about">
-        <div class="content-wrapper"> <!-- new content-wrapper div -->
-          <img src="images/profile.jpg" alt="Your Name">
-          <div class="summary">
-           ...
-          </div>
-        </div> <!-- close content-wrapper div -->
-      </section>
-      ```
-      Then apply the styles to `.content-wrapper` instead of `.about`.
-      ```
-      .content-wrapper {
-        width: 1000px;
-        margin: 0 auto;
-      }
-      ```
-    </script>
-  </section>
-
-  <section class="slide" data-markdown>
-    <script type="text/template">
-      #Exercise #4: Content wrappers!
-      Add the `.content-wrapper` HTML to each page block (header, about, love, etc). Remember, it has to wrap *only* the content.
-
-      Header example below.
-
-      ```
-      <header>
-        <div class="content-wrapper"> <!-- new content-wrapper div -->
-          <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
-          <h2>I'm a digital <strong>designer</strong> and <strong>developer</strong> with a penchant for gourmet doughnuts.</h2>
-        </div> <!-- close content-wrapper div -->
-      </header>
       ```
     </script>
   </section>
