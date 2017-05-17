@@ -82,6 +82,7 @@
       ##[Question 5](http://www.strawpoll.me/12986738)
       ##[Question 6](http://www.strawpoll.me/12987030)
       ##[Question 7](http://www.strawpoll.me/12987057)
+      ##[Question 8](http://www.strawpoll.me/12987123)
       ##[BONUS](http://www.strawpoll.me/12986538)
     </script>
   </section>
@@ -168,40 +169,40 @@
     </script>
   </section>
 
-  <section class="slide" data-markdown>
-    <script type="text/template">
-      <h2>Pseudo class & hover effects</h2>
+  <section class="slide" data-toc>
+    <h2>CSS Float</h2>
 
-      It's common to apply a hover style to links. Use CSS *pseudo-class*, `:hover` to accomplish this.  This keyword is *attached* to a selector and specifies a *state* of the element, using a colon and **no** space.
+    <p>To get block level elements to line up side by side, the stacking flow has to be <em>broken</em> first.</p>
+    <p> Use the <code>float</code> property with a value of <code>left</code> or <code>right</code> to align the element to either side. Any element after the floated element will move up beside it. Let's try it out in the example below.</p>
 
-      <textarea class="snippet" data-subject="#hover">a {
-        padding: 10px;
-      }
-      a:hover {
-        border: 1px solid black;
-        background: red;
-        color: white;
-      }</textarea>
-      <a id="hover">I'm a link!</a>
-    </script>
+    <textarea class="snippet" data-subject="#float">img {
+  float: ;
+}</textarea>
+    <div id="float">
+      <img src="http://placehold.it/150x150" alt="placeholder image">
+      <p style="margin-top:0;">Paragraph tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id quasi iusto, ex cumque omnis iste eveniet mollitia corporis enim.</p>
+    </div>
   </section>
 
   <section class="slide" data-markdown>
     <script type="text/template">
-      <h2>Floats and content wrappers</h2>
-      Use individual property to help you understand what they are and how each affects your background image.
+      ##Content wrappers and float
 
-      <!-- - **background-image**: The url to your image. Remember that you are targeting another folder than the current folder your styles.css file is.-->
-      <!-- - **background-repeat**: To define how the background image is repeated (horizontally, vertically, both or not at all)-->
-      <!-- - **background-attachement**: To define whether the background image should scroll with your page or be fixed.-->
-      <!-- - **background-size**: To define the size of the background image.-->
+      We wrapped all our elements in the section inside a content wrapper, except the image.
+      So now we can float the image left and the summary right.
 
-      ```
-      body {
-        background-image: url('../images/buildings.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
+      Then we need to add width percentages that cannot exceed a total of 100%.
+
+      ```css
+      .profile-img {
+        float: right;
+        width: 30%;
+        margin: 3%;
+      }
+
+      .summary {
+        float: left;
+        width: 64%;
       }
       ```
     </script>
