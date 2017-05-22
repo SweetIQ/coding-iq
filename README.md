@@ -24,8 +24,10 @@ Get the slides [here](https://sweetiq.github.io/coding-iq/workshop4/slides.html)
 ### Workshop #5: Navigation bar / menu
 Get the slides [here](https://sweetiq.github.io/coding-iq/workshop5/slides.html).
 
-## Workshop #6
-JQuery: Level 2
+## Workshop #6: Bucket List Project
+Get the slides [here](https://sweetiq.github.io/coding-iq/workshop6/slides.html).
+
+Follow [example](https://sweetiq.github.io/coding-iq/workshop6/project/travel.html).
 
 
 > The content was taken from [Ladies Learning Code](https://github.com/ladieslearningcode) and adapted for the format of the workshops.

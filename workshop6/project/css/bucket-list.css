@@ -1,0 +1,102 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f3f3eb;
+    margin: 0;
+}
+
+h1 {
+    background-color: #ff5f41;
+    font-family: 'Pacifico', sans-serif;
+    color: #f3f3eb;
+    font-size: 40px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    text-align: center;
+    font-size: 40px;
+}
+
+nav li {
+    display: inline;
+    padding: 20px 30px;
+
+}
+
+li.selected {
+    border-bottom: 3px solid #ff5f41;
+}
+
+a {
+    color: #ff5f41;
+    text-decoration: none;
+}
+
+/** List **/
+
+.list {
+    width: 550px;
+    margin: 0 auto;
+}
+
+.list ol {
+    list-style-type: none;
+    font-size: 30px;
+}
+
+.list li {
+    margin: 50px 0;
+    height: 74px;
+    line-height: 74px;
+}
+
+
+/*** Travel ***/
+
+.list.travels li {
+    padding: 5px 10px;
+    border-left: 3px solid #ff5f41;
+
+}
+
+
+/*** Food ***/
+
+img {
+    float: right;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid #ff5f41;
+}
+
+.list.food li div {
+    float: right;
+    margin-right: 50px;
+}
+
+
+
+.list.food li {
+    overflow: hidden;
+}
+
+
+/*** Music ***/
+
+.list.music {
+    text-align: center;
+}
+
+.list.music .rock {
+    font-family: 'New Rocker', sans-serif;
+}
+
+.list.music .barrio {
+    font-family: 'Barrio', sans-serif;
+}
+
+.list.music .homemade {
+    font-family: 'Homemade Apple', sans-serif;
+}
