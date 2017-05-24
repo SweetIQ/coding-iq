@@ -81,7 +81,7 @@ footer .arrow,
 
 .slide.intro {
 	text-align: center;
-	background-image: url('images/CodingIQ_4.jpg');
+	background-image: url('images/CodingIQ_2.jpg');
 }
 
 .slide.intro h1 {
@@ -100,4 +100,8 @@ footer .arrow,
 
 .slide.quizz h2 a {
 	text-decoration: none;
+}
+
+.slide.project img {
+	border: 1px solid black;
 }
